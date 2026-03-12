@@ -3,58 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohamed Abdelrazek | Content Creation Portfolio</title>
-  <meta
-    name="description"
-    content="Content creation, ad creative, and short-form video portfolio of Mohamed Abdelrazek."
-  />
+  <title>Mohamed Abdelrazek | Creatives</title>
+  <meta name="description" content="Content creation, ad creatives, and short-form video portfolio of Mohamed Abdelrazek." />
   <style>
     :root {
       --bg: #0b0b0d;
-      --bg-2: #111216;
-      --panel: rgba(255, 255, 255, 0.03);
-      --line: rgba(255, 255, 255, 0.08);
+      --bg-soft: #121216;
+      --panel: rgba(255,255,255,0.03);
+      --line: rgba(255,255,255,0.08);
       --text: #f5f3ef;
-      --muted: #b9b1a6;
+      --muted: #b5aea2;
       --gold: #b9915a;
       --gold-2: #d8b07a;
-      --shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      --shadow: 0 24px 60px rgba(0,0,0,0.28);
       --radius-lg: 28px;
       --radius-md: 20px;
       --radius-sm: 14px;
-      --max: 1240px;
+      --max: 1280px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      overflow-x: hidden;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(185, 145, 90, 0.10), transparent 28%),
-        radial-gradient(circle at top right, rgba(216, 176, 122, 0.08), transparent 24%),
+        radial-gradient(circle at top left, rgba(185,145,90,0.10), transparent 28%),
+        radial-gradient(circle at top right, rgba(216,176,122,0.08), transparent 24%),
         linear-gradient(180deg, #0a0a0c 0%, #0e0e12 100%);
       color: var(--text);
-      line-height: 1.5;
+      overflow-x: hidden;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
 
     .container {
       width: min(calc(100% - 32px), var(--max));
@@ -113,9 +95,7 @@
       transition: color 0.2s ease;
     }
 
-    .nav-links a:hover {
-      color: var(--text);
-    }
+    .nav-links a:hover { color: var(--text); }
 
     .btn {
       display: inline-flex;
@@ -128,12 +108,10 @@
       border: 1px solid transparent;
       font-weight: 700;
       font-size: 14px;
-      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-    }
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
       color: #16110c;
@@ -162,96 +140,52 @@
       font-weight: 800;
     }
 
-    h1, h2, h3 {
-      margin: 0;
-      line-height: 1.1;
-    }
+    h1, h2, h3 { margin: 0; line-height: 1.08; }
+    h1 { font-size: clamp(38px, 6vw, 72px); letter-spacing: -0.04em; margin-top: 16px; }
+    h2 { font-size: clamp(24px, 4vw, 38px); }
+    h3 { font-size: 18px; }
 
-    h1 {
-      font-size: clamp(38px, 6vw, 68px);
-      margin-top: 18px;
-      letter-spacing: -0.04em;
-    }
+    section { padding: 28px 0; }
 
-    h2 {
-      font-size: clamp(28px, 4vw, 42px);
-    }
-
-    section {
-      padding: 28px 0;
-    }
-
-    .hero {
-      padding: 70px 0 24px;
-    }
+    .hero { padding: 64px 0 18px; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 26px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
       align-items: stretch;
     }
 
     .hero-copy,
     .hero-card,
-    .section-card,
-    .project-card,
-    .metric,
-    .contact-card,
+    .gallery-card,
     .video-card,
-    .proof-box,
-    .service-box {
+    .contact-card,
+    .link-card {
       background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow);
     }
 
-    .hero-copy {
-      padding: 38px;
-    }
-
+    .hero-copy { padding: 34px; }
     .hero-copy p {
       margin: 16px 0 0;
-      max-width: 720px;
       color: #d7d1c6;
       font-size: 17px;
+      max-width: 640px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 24px;
-    }
-
-    .hero-meta {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .metric {
-      padding: 16px;
-      border-radius: var(--radius-md);
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 24px;
-      color: var(--gold-2);
-      margin-bottom: 4px;
-    }
-
-    .metric span {
-      color: var(--muted);
-      font-size: 13px;
+      margin-top: 22px;
     }
 
     .hero-card {
-      position: relative;
       overflow: hidden;
+      position: relative;
       min-height: 100%;
     }
 
@@ -265,186 +199,127 @@
     .hero-overlay {
       position: absolute;
       inset: auto 18px 18px 18px;
-      padding: 16px 18px;
-      background: linear-gradient(180deg, rgba(9,9,12,0.22), rgba(9,9,12,0.88));
-      border: 1px solid rgba(255,255,255,0.08);
+      padding: 14px 16px;
       border-radius: 18px;
-    }
-
-    .hero-overlay strong {
-      display: block;
-      font-size: 17px;
-      margin-bottom: 4px;
-    }
-
-    .hero-overlay span {
-      color: var(--muted);
-      font-size: 13px;
+      background: linear-gradient(180deg, rgba(9,9,12,0.12), rgba(9,9,12,0.88));
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #f5f3ef;
+      font-size: 14px;
+      font-weight: 700;
     }
 
     .section-head {
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .section-mini {
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 300px 1fr;
       gap: 18px;
-      margin-bottom: 18px;
+      margin-top: 18px;
     }
 
-    .section-head p {
-      display: none;
+    .contact-card {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
-    .section-card {
-      padding: 28px;
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
-    .about-grid {
+    .profile img {
+      width: 76px;
+      height: 76px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+    }
+
+    .profile-meta strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .profile-meta span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-links {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .about-list {
-      display: grid;
       gap: 10px;
-      margin-top: 14px;
     }
 
-    .list-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      color: #ddd7cc;
-      font-size: 15px;
-    }
-
-    .bullet {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: linear-gradient(145deg, var(--gold-2), var(--gold));
-      margin-top: 6px;
-      flex: 0 0 auto;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .service-box {
-      padding: 24px;
-      border-radius: var(--radius-md);
-    }
-
-    .service-box h3 {
-      font-size: 22px;
-      margin-bottom: 0;
-    }
-
-    .service-box p {
-      display: none;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .project-card {
-      overflow: hidden;
-    }
-
-    .project-media {
-      position: relative;
-      height: 300px;
-      max-height: 300px;
-      overflow: hidden;
-      background: linear-gradient(180deg, #111217, #0d0e12);
+    .link-card {
+      min-height: 54px;
+      padding: 0 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 16px;
-    }
-
-    .project-media img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      object-position: center;
-      transition: transform 0.25s ease;
-    }
-
-    .project-card:hover .project-media img {
-      transform: scale(1.01);
-    }
-
-    .project-body {
-      padding: 20px 22px 22px;
-    }
-
-    .project-body h3 {
-      font-size: 24px;
-      margin-top: 2px;
-    }
-
-    .project-body p {
-      display: none;
-    }
-
-    .tag-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      min-height: 30px;
-      padding: 0 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(216,176,122,0.20);
-      background: rgba(185,145,90,0.08);
-      color: var(--gold-2);
-      font-size: 12px;
+      text-align: center;
+      border-radius: 16px;
       font-weight: 700;
-    }
-
-    .project-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-
-    .link-chip {
-      display: inline-flex;
-      align-items: center;
-      min-height: 38px;
-      padding: 0 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
+      font-size: 14px;
       color: var(--text);
-      background: rgba(255,255,255,0.03);
-      font-size: 13px;
-      font-weight: 700;
     }
 
-    .videos-grid {
+    .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      align-items: start;
+      gap: 16px;
+    }
+
+    .gallery-grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-card {
+      overflow: hidden;
+      padding: 12px;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #101115, #0c0d11);
+    }
+
+    .gallery-label {
+      padding: 10px 4px 2px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
     }
 
     .video-card {
-      max-width: 280px;
+      max-width: 250px;
       width: 100%;
       margin: 0 auto;
       overflow: hidden;
@@ -454,7 +329,6 @@
       position: relative;
       width: 100%;
       aspect-ratio: 9 / 15;
-      max-height: 420px;
       background: #0d0e12;
     }
 
@@ -467,97 +341,28 @@
       background: #0d0e12;
     }
 
-    .video-body {
-      padding: 14px 16px 16px;
-    }
-
-    .video-body h3 {
-      font-size: 18px;
-      margin-bottom: 0;
-    }
-
-    .video-body p {
-      display: none;
-    }
-
-    .proof-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .proof-box {
-      padding: 20px;
-      border-radius: var(--radius-md);
-    }
-
-    .proof-box strong {
-      display: block;
-      color: var(--gold-2);
-      font-size: 16px;
-    }
-
-    .proof-box span {
-      display: none;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 18px;
-    }
-
-    .contact-card {
-      padding: 28px;
-    }
-
-    .contact-card p {
-      display: none;
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .contact-item {
-      padding: 15px 16px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.02);
-      color: #e4ded4;
-      word-break: break-word;
+    .video-tag {
+      padding: 10px 12px 12px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
     }
 
     footer {
-      padding: 20px 0 50px;
+      padding: 24px 0 46px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
+      text-align: center;
     }
 
     @media (max-width: 1100px) {
       .hero-grid,
-      .about-grid,
-      .contact-grid,
-      .services-grid,
-      .projects-grid,
-      .proof-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .videos-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .project-media {
-        height: 260px;
-        max-height: 260px;
-      }
-
-      .hero-card img {
-        min-height: 380px;
-      }
+      .contact-wrap { grid-template-columns: 1fr; }
+      .gallery-grid,
+      .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero-card img { min-height: 380px; }
     }
 
     @media (max-width: 760px) {
@@ -567,33 +372,14 @@
         flex-direction: column;
       }
 
-      .hero {
-        padding-top: 40px;
-      }
-
-      .hero-copy,
-      .section-card,
-      .contact-card,
-      .project-body {
-        padding: 22px;
-      }
-
-      .hero-meta {
-        grid-template-columns: 1fr;
-      }
-
-      .videos-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project-media {
-        height: 220px;
-        max-height: 220px;
-      }
-
-      h1 {
-        font-size: 42px;
-      }
+      .hero { padding-top: 42px; }
+      .hero-copy { padding: 24px; }
+      .contact-links { grid-template-columns: 1fr; }
+      .gallery-grid,
+      .gallery-grid.two,
+      .video-grid { grid-template-columns: 1fr; }
+      .gallery-card img { height: 220px; }
+      h1 { font-size: 42px; }
     }
   </style>
 </head>
@@ -604,15 +390,11 @@
         <span class="brand-mark">MA</span>
         <span>Mohamed Abdelrazek</span>
       </a>
-
       <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
+        <a href="#creatives">Creatives</a>
         <a href="#videos">Videos</a>
-        <a href="#proof">Focus</a>
         <a href="#contact">Contact</a>
-        <a class="btn btn-secondary" href="mailto:moe-abdelrazek@outlook.com">Email Me</a>
+        <a class="btn btn-secondary" href="https://moeabdelrazek.github.io/Moe-Abdelrazek/" target="_blank" rel="noreferrer">Main Portfolio</a>
       </nav>
     </div>
   </header>
@@ -621,219 +403,132 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Content Creation • Ad Creatives • Short-Form Video</span>
-          <h1>I build sharp content for real brands.</h1>
-          <p>Social content, static creatives, product visuals, and short-form video.</p>
-
+          <span class="eyebrow">Content Creation • Ad Creatives • Video</span>
+          <h1>Creative work.</h1>
+          <p>Static creatives. Product visuals. Short-form video.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">View Work</a>
-            <a class="btn btn-secondary" href="#contact">Contact</a>
+            <a class="btn btn-primary" href="#creatives">View Creatives</a>
+            <a class="btn btn-secondary" href="#videos">View Videos</a>
           </div>
 
-          <div class="hero-meta">
-            <div class="metric">
-              <strong>5</strong>
-              <span>projects</span>
-            </div>
-            <div class="metric">
-              <strong>3</strong>
-              <span>services</span>
-            </div>
-            <div class="metric">
-              <strong>1</strong>
-              <span>clear focus</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/premium-retail-display-with-highlighted-stand-and-customer.png?v=1764059415"
-            alt="Featured premium creative sample"
-            loading="lazy"
-          />
-          <div class="hero-overlay">
-            <strong>Featured visual</strong>
-            <span>Premium commercial creative</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">About</span>
-            <h2>Business-first creative work</h2>
-          </div>
-        </div>
-
-        <div class="section-card about-grid">
-          <div>
-            <h3>What I bring</h3>
-            <div class="about-list">
-              <div class="list-item">
-                <span class="bullet"></span>
-                <span>Strong visual and content direction.</span>
+          <div class="contact-wrap" id="contact">
+            <div class="contact-card">
+              <div class="profile">
+                <img src="https://moeabdelrazek.github.io/Moe-Abdelrazek/profile.jpg" alt="Mohamed Abdelrazek" />
+                <div class="profile-meta">
+                  <strong>Mohamed Abdelrazek</strong>
+                  <span>Alexandria, Egypt</span>
+                </div>
               </div>
-              <div class="list-item">
-                <span class="bullet"></span>
-                <span>Clear message structure.</span>
+              <div class="contact-links">
+                <a class="link-card" href="mailto:moe-abdelrazek@outlook.com">Email</a>
+                <a class="link-card" href="https://wa.me/201017286384" target="_blank" rel="noreferrer">WhatsApp</a>
+                <a class="link-card" href="https://www.linkedin.com/in/moe-abdelrazek/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a class="link-card" href="https://moeabdelrazek.github.io/Moe-Abdelrazek/" target="_blank" rel="noreferrer">Portfolio</a>
               </div>
             </div>
-          </div>
 
-          <div>
-            <h3>How I work</h3>
-            <div class="about-list">
-              <div class="list-item">
-                <span class="bullet"></span>
-                <span>Research the brand and audience.</span>
-              </div>
-              <div class="list-item">
-                <span class="bullet"></span>
-                <span>Build content that fits the goal.</span>
-              </div>
+            <div class="hero-card">
+              <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/premium-retail-display-with-highlighted-stand-and-customer.png?v=1764059415" alt="Featured creative" />
+              <div class="hero-overlay">Selected work</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="services">
+    <section id="creatives">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Services</span>
-            <h2>Core work</h2>
+            <span class="eyebrow">Creatives</span>
+            <h2>TechnoMounts</h2>
           </div>
+          <span class="section-mini">9 images</span>
         </div>
 
-        <div class="services-grid">
-          <article class="service-box">
-            <h3>Content Creation</h3>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/premium-retail-display-with-highlighted-stand-and-customer.png?v=1764059415" alt="TechnoMounts retail display" loading="lazy" />
+            <div class="gallery-label">Retail</div>
           </article>
-
-          <article class="service-box">
-            <h3>Ad Creatives</h3>
+          <article class="gallery-card">
+            <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/Business_Tablet_Stand.png?v=1764801211" alt="TechnoMounts business tablet stand" loading="lazy" />
+            <div class="gallery-label">Business</div>
           </article>
-
-          <article class="service-box">
-            <h3>Short-Form Video</h3>
+          <article class="gallery-card">
+            <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/tech-retail.png?v=1765326537" alt="TechnoMounts tech retail" loading="lazy" />
+            <div class="gallery-label">Tech Retail</div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/Hospitality_Tablet_Stand_-_Hotel_Reception_Desktop_Mount.png?v=1772695866" alt="TechnoMounts hospitality desk mount" loading="lazy" />
+            <div class="gallery-label">Hospitality</div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/exhibition-product-catalog.png?v=1765376683" alt="TechnoMounts exhibition creative" loading="lazy" />
+            <div class="gallery-label">Exhibition</div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/realistic-restaurant-black-stand.png?v=1765454686" alt="TechnoMounts restaurant use case" loading="lazy" />
+            <div class="gallery-label">Restaurant</div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/conference-center.png?v=1765441959" alt="TechnoMounts conference center" loading="lazy" />
+            <div class="gallery-label">Conference</div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/trade-show-demonstration.png?v=1765327648" alt="TechnoMounts trade show demonstration" loading="lazy" />
+            <div class="gallery-label">Trade Show</div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://www.technomounts.com/cdn/shop/files/Monitor_desk_mount_for_luxury_retail_environment_Dubai_-_Premium_VESA_display_stand.png?v=1772700359&width=713" alt="TechnoMounts luxury retail monitor display" loading="lazy" />
+            <div class="gallery-label">Luxury Retail</div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="work">
+    <section>
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Selected Work</span>
-            <h2>Featured projects</h2>
+            <span class="eyebrow">Creatives</span>
+            <h2>Haksoss</h2>
           </div>
+          <span class="section-mini">2 images</span>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-media">
-              <img
-                src="https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/595259565_875931331631107_698700857952058153_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=gDJXIPRDch4Q7kNvwFmFlOK&_nc_oc=AdnmB2m3Jm1QlO8Yw4aqEuESuvKPbhYeyc1gUqRq9Crgk-qTU4RdHVfXds9kjrjqB34&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=VwNnuGg6hbFL6aaCsRsOgw&_nc_ss=8&oh=00_AfxWyDZioyJv9NyFWq_jHyxQ94AvdTBM_HJhvfyyF2kV-g&oe=69B88E32"
-                alt="Haksoss Café and Restaurant creative"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-body">
-              <div class="tag-row">
-                <span class="tag">Hospitality</span>
-                <span class="tag">Static Creative</span>
-              </div>
-              <h3>Haksoss Café & Restaurant</h3>
-              <div class="project-links">
-                <a class="link-chip" href="https://www.facebook.com/share/r/16mPTy3YaZ/" target="_blank" rel="noreferrer">View Reel</a>
-              </div>
-            </div>
+        <div class="gallery-grid two">
+          <article class="gallery-card">
+            <img src="https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/595259565_875931331631107_698700857952058153_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=gDJXIPRDch4Q7kNvwFmFlOK&_nc_oc=AdnmB2m3Jm1QlO8Yw4aqEuESuvKPbhYeyc1gUqRq9Crgk-qTU4RdHVfXds9kjrjqB34&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=VwNnuGg6hbFL6aaCsRsOgw&_nc_ss=8&oh=00_AfxWyDZioyJv9NyFWq_jHyxQ94AvdTBM_HJhvfyyF2kV-g&oe=69B88E32" alt="Haksoss tea creative" loading="lazy" />
+            <div class="gallery-label">Tea</div>
           </article>
-
-          <article class="project-card">
-            <div class="project-media">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/tech-retail.png?v=1765326537"
-                alt="TechnoMounts creative"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-body">
-              <div class="tag-row">
-                <span class="tag">Product Marketing</span>
-                <span class="tag">Ad Creative</span>
-              </div>
-              <h3>TechnoMounts</h3>
-              <div class="project-links">
-                <a class="link-chip" href="https://www.technomounts.com/" target="_blank" rel="noreferrer">Website</a>
-              </div>
-            </div>
+          <article class="gallery-card">
+            <img src="https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/591911133_870612895496284_3799076164702562648_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=g5FkcAnxYF4Q7kNvwG6pzw8&_nc_oc=Adnw7YXCAKDY0fTm_IaPL6pUanArrxDYwTE3en2i23-aN2viXwcZIHSCLjO9PP1-6IA&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=t2TANlmE1k38oC-nQEoPeA&_nc_ss=8&oh=00_Afzv9bz_UZzXWAjjCxwTvVFDl-eJdOG40fQBpKAK5KBV1A&oe=69B89A80" alt="Haksoss pastry creative" loading="lazy" />
+            <div class="gallery-label">Dessert</div>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="project-card">
-            <div class="project-media">
-              <img
-                src="https://scontent.fcai19-8.fna.fbcdn.net/v/t51.82787-15/602008089_18248920693288800_61861655786230000_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=1Vn-CwSU_04Q7kNvwH0FuxA&_nc_oc=Adn8abaPSkNBdkGCmeZ1FOi9WPyZzURz3HJK1mJ-0WVek8c0_DztnygaBTswJG198BY&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=Lvlp80yYRR2L0NH5HGEFSg&_nc_ss=8&oh=00_AfwzFbmijlmG55VPgbQWoLe739eZOzdy1ox3NONuBR4nFQ&oe=69B89697"
-                alt="Rafiki Veterinary Hospital creative"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-body">
-              <div class="tag-row">
-                <span class="tag">Healthcare</span>
-                <span class="tag">Educational</span>
-              </div>
-              <h3>Rafiki Veterinary Hospital</h3>
-            </div>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Creatives</span>
+            <h2>Rafiki</h2>
+          </div>
+          <span class="section-mini">2 images</span>
+        </div>
+
+        <div class="gallery-grid two">
+          <article class="gallery-card">
+            <img src="https://scontent.fcai19-8.fna.fbcdn.net/v/t51.82787-15/602008089_18248920693288800_61861655786230000_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=1Vn-CwSU_04Q7kNvwH0FuxA&_nc_oc=Adn8abaPSkNBdkGCmeZ1FOi9WPyZzURz3HJK1mJ-0WVek8c0_DztnygaBTswJG198BY&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=Lvlp80yYRR2L0NH5HGEFSg&_nc_ss=8&oh=00_AfwzFbmijlmG55VPgbQWoLe739eZOzdy1ox3NONuBR4nFQ&oe=69B89697" alt="Rafiki tortoise creative" loading="lazy" />
+            <div class="gallery-label">Tortoise</div>
           </article>
-
-          <article class="project-card">
-            <div class="project-media">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/realistic-restaurant-black-stand.png?v=1765454686"
-                alt="Saruja Restaurants project"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-body">
-              <div class="tag-row">
-                <span class="tag">Restaurant</span>
-                <span class="tag">Short-Form Video</span>
-              </div>
-              <h3>Saruja Restaurants</h3>
-              <div class="project-links">
-                <a class="link-chip" href="https://www.tiktok.com/@saruja.restaurants/video/7432309714056121607?is_from_webapp=1&sender_device=pc&web_id=7587772464236709387" target="_blank" rel="noreferrer">TikTok 1</a>
-                <a class="link-chip" href="https://www.tiktok.com/@saruja.restaurants/video/7515131227393838352?is_from_webapp=1&sender_device=pc&web_id=7587772464236709387" target="_blank" rel="noreferrer">TikTok 2</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/conference-center.png?v=1765441959"
-                alt="Invest Real Estate project"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-body">
-              <div class="tag-row">
-                <span class="tag">Real Estate</span>
-                <span class="tag">Short-Form Video</span>
-              </div>
-              <h3>Invest Real Estate</h3>
-              <div class="project-links">
-                <a class="link-chip" href="https://www.tiktok.com/@investrealestate/video/7390904470080621866?is_from_webapp=1&sender_device=pc&web_id=7587772464236709387" target="_blank" rel="noreferrer">TikTok 1</a>
-                <a class="link-chip" href="https://www.tiktok.com/@investrealestate/video/7343824767646141742?is_from_webapp=1&sender_device=pc&web_id=7587772464236709387" target="_blank" rel="noreferrer">TikTok 2</a>
-                <a class="link-chip" href="https://www.tiktok.com/@investrealestate/video/7316155565133122862?is_from_webapp=1&sender_device=pc&web_id=7587772464236709387" target="_blank" rel="noreferrer">TikTok 3</a>
-              </div>
-            </div>
+          <article class="gallery-card">
+            <img src="https://scontent.fcai19-8.fna.fbcdn.net/v/t51.82787-15/587965943_18247919731288800_2013140464505936843_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=Hh2ravn7SLEQ7kNvwH4UwQo&_nc_oc=Adn6K6kwxgTBr4N2nFu2s0QmT3kLufRfx72mgFnG5Bm46BZ9MXTz97Kk243jyKqE08s&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=6wKOdwXGBIUAe6aoGH_Lag&_nc_ss=8&oh=00_AfyWb3J_7r2g1ReUVxqJKiqlIRmhd9oEVJikicJ1b3i3JQ&oe=69B893BF" alt="Rafiki bird care creative" loading="lazy" />
+            <div class="gallery-label">Bird Care</div>
           </article>
         </div>
       </div>
@@ -844,153 +539,49 @@
         <div class="section-head">
           <div>
             <span class="eyebrow">Videos</span>
-            <h2>Video showcase</h2>
+            <h2>Short-form</h2>
           </div>
+          <span class="section-mini">5 embeds</span>
         </div>
 
-        <div class="videos-grid">
+        <div class="video-grid">
           <article class="video-card">
             <div class="video-frame">
-              <iframe
-                src="https://www.tiktok.com/embed/v2/7432309714056121607"
-                allowfullscreen
-                loading="lazy"
-                title="Saruja Restaurants video 1"
-              ></iframe>
+              <iframe src="https://www.tiktok.com/embed/v2/7432309714056121607" allowfullscreen loading="lazy" title="Saruja video 1"></iframe>
             </div>
-            <div class="video-body">
-              <div class="tag-row">
-                <span class="tag">Saruja</span>
-              </div>
-              <h3>Saruja Video 1</h3>
-            </div>
+            <div class="video-tag">Saruja</div>
           </article>
-
           <article class="video-card">
             <div class="video-frame">
-              <iframe
-                src="https://www.tiktok.com/embed/v2/7515131227393838352"
-                allowfullscreen
-                loading="lazy"
-                title="Saruja Restaurants video 2"
-              ></iframe>
+              <iframe src="https://www.tiktok.com/embed/v2/7515131227393838352" allowfullscreen loading="lazy" title="Saruja video 2"></iframe>
             </div>
-            <div class="video-body">
-              <div class="tag-row">
-                <span class="tag">Saruja</span>
-              </div>
-              <h3>Saruja Video 2</h3>
-            </div>
+            <div class="video-tag">Saruja</div>
           </article>
-
           <article class="video-card">
             <div class="video-frame">
-              <iframe
-                src="https://www.tiktok.com/embed/v2/7390904470080621866"
-                allowfullscreen
-                loading="lazy"
-                title="Invest Real Estate video 1"
-              ></iframe>
+              <iframe src="https://www.tiktok.com/embed/v2/7390904470080621866" allowfullscreen loading="lazy" title="Invest video 1"></iframe>
             </div>
-            <div class="video-body">
-              <div class="tag-row">
-                <span class="tag">Invest</span>
-              </div>
-              <h3>Invest Video 1</h3>
-            </div>
+            <div class="video-tag">Invest</div>
           </article>
-
           <article class="video-card">
             <div class="video-frame">
-              <iframe
-                src="https://www.tiktok.com/embed/v2/7343824767646141742"
-                allowfullscreen
-                loading="lazy"
-                title="Invest Real Estate video 2"
-              ></iframe>
+              <iframe src="https://www.tiktok.com/embed/v2/7343824767646141742" allowfullscreen loading="lazy" title="Invest video 2"></iframe>
             </div>
-            <div class="video-body">
-              <div class="tag-row">
-                <span class="tag">Invest</span>
-              </div>
-              <h3>Invest Video 2</h3>
-            </div>
+            <div class="video-tag">Invest</div>
           </article>
-
           <article class="video-card">
             <div class="video-frame">
-              <iframe
-                src="https://www.tiktok.com/embed/v2/7316155565133122862"
-                allowfullscreen
-                loading="lazy"
-                title="Invest Real Estate video 3"
-              ></iframe>
+              <iframe src="https://www.tiktok.com/embed/v2/7316155565133122862" allowfullscreen loading="lazy" title="Invest video 3"></iframe>
             </div>
-            <div class="video-body">
-              <div class="tag-row">
-                <span class="tag">Invest</span>
-              </div>
-              <h3>Invest Video 3</h3>
-            </div>
+            <div class="video-tag">Invest</div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="proof">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Focus</span>
-            <h2>What I do best</h2>
-          </div>
-        </div>
-
-        <div class="proof-grid">
-          <div class="proof-box">
-            <strong>Brand content</strong>
-          </div>
-          <div class="proof-box">
-            <strong>Short-form video</strong>
-          </div>
-          <div class="proof-box">
-            <strong>Ad creatives</strong>
-          </div>
-          <div class="proof-box">
-            <strong>Clean presentation</strong>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container contact-grid">
-        <div class="contact-card">
-          <span class="eyebrow">Contact</span>
-          <h2>Let’s work together</h2>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:moe-abdelrazek@outlook.com">Email Me</a>
-            <a class="btn btn-secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <h3>Portfolio details</h3>
-          <div class="contact-list">
-            <div class="contact-item">Mohamed Abdelrazek</div>
-            <div class="contact-item">Alexandria, Egypt</div>
-            <div class="contact-item">Content Creation • Ad Creatives • Short-Form Video</div>
-            <div class="contact-item">moe-abdelrazek@outlook.com</div>
-          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 Mohamed Abdelrazek. Built for GitHub Pages.
-    </div>
+    © 2026 Mohamed Abdelrazek
   </footer>
 </body>
 </html>

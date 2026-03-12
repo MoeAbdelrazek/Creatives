@@ -19,11 +19,12 @@
       --radius-lg: 28px;
       --radius-md: 20px;
       --radius-sm: 14px;
-      --max: 1280px;
+      --max: 1320px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -39,7 +40,7 @@
     img { display: block; max-width: 100%; height: auto; }
 
     .container {
-      width: min(calc(100% - 32px), var(--max));
+      width: min(calc(100% - 40px), var(--max));
       margin: 0 auto;
     }
 
@@ -141,23 +142,23 @@
     }
 
     h1, h2, h3 { margin: 0; line-height: 1.08; }
-    h1 { font-size: clamp(38px, 6vw, 72px); letter-spacing: -0.04em; margin-top: 16px; }
+    h1 { font-size: clamp(42px, 6vw, 74px); letter-spacing: -0.05em; margin-top: 16px; }
     h2 { font-size: clamp(24px, 4vw, 38px); }
     h3 { font-size: 18px; }
 
-    section { padding: 28px 0; }
+    section { padding: 34px 0; }
 
-    .hero { padding: 64px 0 18px; }
+    .hero { padding: 56px 0 20px; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 0.92fr 1.08fr;
       gap: 24px;
       align-items: stretch;
     }
 
     .hero-copy,
-    .hero-card,
+    .hero-visual,
     .gallery-card,
     .video-card,
     .contact-card,
@@ -168,12 +169,19 @@
       box-shadow: var(--shadow);
     }
 
-    .hero-copy { padding: 34px; }
+    .hero-copy {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 470px;
+    }
+
     .hero-copy p {
-      margin: 16px 0 0;
+      margin: 14px 0 0;
       color: #d7d1c6;
-      font-size: 17px;
-      max-width: 640px;
+      font-size: 18px;
+      max-width: 520px;
     }
 
     .hero-actions {
@@ -183,29 +191,50 @@
       margin-top: 22px;
     }
 
-    .hero-card {
+    .hero-visual {
       overflow: hidden;
-      position: relative;
-      min-height: 100%;
+      padding: 16px;
+      min-height: 470px;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 14px;
     }
 
-    .hero-card img {
+    .hero-main {
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #111217, #0d0e12);
+      min-height: 0;
+    }
+
+    .hero-main img {
       width: 100%;
       height: 100%;
-      min-height: 520px;
-      object-fit: cover;
+      min-height: 370px;
+      object-fit: contain;
+      object-position: center;
     }
 
-    .hero-overlay {
-      position: absolute;
-      inset: auto 18px 18px 18px;
-      padding: 14px 16px;
+    .hero-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .hero-thumb {
+      height: 92px;
       border-radius: 18px;
-      background: linear-gradient(180deg, rgba(9,9,12,0.12), rgba(9,9,12,0.88));
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #f5f3ef;
-      font-size: 14px;
-      font-weight: 700;
+      overflow: hidden;
+      background: linear-gradient(180deg, #111217, #0d0e12);
+      border: 1px solid var(--line);
+    }
+
+    .hero-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      padding: 8px;
     }
 
     .section-head {
@@ -213,7 +242,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .section-mini {
@@ -223,29 +252,21 @@
       text-transform: uppercase;
     }
 
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 18px;
-      margin-top: 18px;
-    }
-
     .contact-card {
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
+      margin-top: 26px;
+      padding: 16px;
     }
 
     .profile {
       display: flex;
       align-items: center;
       gap: 14px;
+      margin-bottom: 14px;
     }
 
     .profile img {
-      width: 76px;
-      height: 76px;
+      width: 72px;
+      height: 72px;
       border-radius: 18px;
       object-fit: cover;
       border: 1px solid var(--line);
@@ -253,7 +274,7 @@
 
     .profile-meta strong {
       display: block;
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 4px;
     }
 
@@ -264,12 +285,12 @@
 
     .contact-links {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
     }
 
     .link-card {
-      min-height: 54px;
+      min-height: 52px;
       padding: 0 14px;
       display: flex;
       align-items: center;
@@ -284,7 +305,7 @@
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      gap: 18px;
     }
 
     .gallery-grid.two {
@@ -293,20 +314,21 @@
 
     .gallery-card {
       overflow: hidden;
-      padding: 12px;
+      padding: 14px;
     }
 
     .gallery-card img {
       width: 100%;
-      height: 260px;
+      height: 320px;
       object-fit: contain;
       object-position: center;
-      border-radius: 18px;
+      border-radius: 20px;
       background: linear-gradient(180deg, #101115, #0c0d11);
+      padding: 10px;
     }
 
     .gallery-label {
-      padding: 10px 4px 2px;
+      padding: 12px 4px 2px;
       font-size: 13px;
       color: var(--muted);
       text-align: center;
@@ -315,14 +337,15 @@
     .video-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      gap: 18px;
     }
 
     .video-card {
-      max-width: 250px;
+      max-width: 280px;
       width: 100%;
       margin: 0 auto;
       overflow: hidden;
+      padding: 10px;
     }
 
     .video-frame {
@@ -330,6 +353,8 @@
       width: 100%;
       aspect-ratio: 9 / 15;
       background: #0d0e12;
+      border-radius: 18px;
+      overflow: hidden;
     }
 
     .video-frame iframe {
@@ -342,7 +367,7 @@
     }
 
     .video-tag {
-      padding: 10px 12px 12px;
+      padding: 12px 8px 6px;
       text-align: center;
       color: var(--muted);
       font-size: 13px;
@@ -357,12 +382,13 @@
     }
 
     @media (max-width: 1100px) {
-      .hero-grid,
-      .contact-wrap { grid-template-columns: 1fr; }
+      .hero-grid { grid-template-columns: 1fr; }
       .gallery-grid,
       .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .gallery-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .hero-card img { min-height: 380px; }
+      .hero-copy,
+      .hero-visual { min-height: auto; }
+      .hero-main img { min-height: 320px; }
     }
 
     @media (max-width: 760px) {
@@ -372,14 +398,16 @@
         flex-direction: column;
       }
 
-      .hero { padding-top: 42px; }
+      .hero { padding-top: 38px; }
       .hero-copy { padding: 24px; }
       .contact-links { grid-template-columns: 1fr; }
       .gallery-grid,
       .gallery-grid.two,
-      .video-grid { grid-template-columns: 1fr; }
-      .gallery-card img { height: 220px; }
-      h1 { font-size: 42px; }
+      .video-grid,
+      .hero-strip { grid-template-columns: 1fr; }
+      .gallery-card img { height: 260px; }
+      .hero-thumb { height: 100px; }
+      h1 { font-size: 44px; }
     }
   </style>
 </head>
@@ -403,34 +431,46 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Content Creation • Ad Creatives • Video</span>
-          <h1>Creative work.</h1>
-          <p>Static creatives. Product visuals. Short-form video.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#creatives">View Creatives</a>
-            <a class="btn btn-secondary" href="#videos">View Videos</a>
+          <div>
+            <span class="eyebrow">Content Creation • Ad Creatives • Video</span>
+            <h1>Creative work.</h1>
+            <p>Static creatives. Product visuals. Short-form video.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#creatives">View Creatives</a>
+              <a class="btn btn-secondary" href="#videos">View Videos</a>
+            </div>
           </div>
 
-          <div class="contact-wrap" id="contact">
-            <div class="contact-card">
-              <div class="profile">
-                <img src="https://moeabdelrazek.github.io/Moe-Abdelrazek/profile.jpg" alt="Mohamed Abdelrazek" />
-                <div class="profile-meta">
-                  <strong>Mohamed Abdelrazek</strong>
-                  <span>Alexandria, Egypt</span>
-                </div>
-              </div>
-              <div class="contact-links">
-                <a class="link-card" href="mailto:moe-abdelrazek@outlook.com">Email</a>
-                <a class="link-card" href="https://wa.me/201017286384" target="_blank" rel="noreferrer">WhatsApp</a>
-                <a class="link-card" href="https://www.linkedin.com/in/moe-abdelrazek/" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a class="link-card" href="https://moeabdelrazek.github.io/Moe-Abdelrazek/" target="_blank" rel="noreferrer">Portfolio</a>
+          <div class="contact-card" id="contact">
+            <div class="profile">
+              <img src="https://moeabdelrazek.github.io/Moe-Abdelrazek/profile.jpg" alt="Mohamed Abdelrazek" />
+              <div class="profile-meta">
+                <strong>Mohamed Abdelrazek</strong>
+                <span>Alexandria, Egypt</span>
               </div>
             </div>
+            <div class="contact-links">
+              <a class="link-card" href="mailto:moe-abdelrazek@outlook.com">Email</a>
+              <a class="link-card" href="https://wa.me/201017286384" target="_blank" rel="noreferrer">WhatsApp</a>
+              <a class="link-card" href="https://www.linkedin.com/in/moe-abdelrazek/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="link-card" href="https://moeabdelrazek.github.io/Moe-Abdelrazek/" target="_blank" rel="noreferrer">Portfolio</a>
+            </div>
+          </div>
+        </div>
 
-            <div class="hero-card">
-              <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/premium-retail-display-with-highlighted-stand-and-customer.png?v=1764059415" alt="Featured creative" />
-              <div class="hero-overlay">Selected work</div>
+        <div class="hero-visual">
+          <div class="hero-main">
+            <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/premium-retail-display-with-highlighted-stand-and-customer.png?v=1764059415" alt="Featured creative" />
+          </div>
+          <div class="hero-strip">
+            <div class="hero-thumb">
+              <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/Business_Tablet_Stand.png?v=1764801211" alt="Business creative" />
+            </div>
+            <div class="hero-thumb">
+              <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/tech-retail.png?v=1765326537" alt="Tech retail creative" />
+            </div>
+            <div class="hero-thumb">
+              <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/Hospitality_Tablet_Stand_-_Hotel_Reception_Desktop_Mount.png?v=1772695866" alt="Hospitality creative" />
             </div>
           </div>
         </div>

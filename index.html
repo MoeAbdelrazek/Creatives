@@ -4,19 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohamed Abdelrazek | Content Creation Portfolio</title>
-  <meta name="description" content="Content creation, ad creative, and short-form video portfolio of Mohamed Abdelrazek." />
+  <meta
+    name="description"
+    content="Content creation, ad creative, and short-form video portfolio of Mohamed Abdelrazek."
+  />
   <style>
     :root {
       --bg: #0b0b0d;
-      --bg-soft: #121216;
-      --panel: #17171c;
-      --panel-2: #1d1d24;
-      --line: rgba(255,255,255,0.08);
+      --bg-2: #111216;
+      --panel: rgba(255, 255, 255, 0.03);
+      --line: rgba(255, 255, 255, 0.08);
       --text: #f5f3ef;
-      --muted: #b5aea2;
+      --muted: #b9b1a6;
       --gold: #b9915a;
       --gold-2: #d8b07a;
-      --shadow: 0 24px 60px rgba(0,0,0,0.28);
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
       --radius-lg: 28px;
       --radius-md: 20px;
       --radius-sm: 14px;
@@ -33,13 +35,14 @@
 
     body {
       margin: 0;
+      overflow-x: hidden;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(185,145,90,0.10), transparent 28%),
-        radial-gradient(circle at top right, rgba(216,176,122,0.08), transparent 24%),
+        radial-gradient(circle at top left, rgba(185, 145, 90, 0.10), transparent 28%),
+        radial-gradient(circle at top right, rgba(216, 176, 122, 0.08), transparent 24%),
         linear-gradient(180deg, #0a0a0c 0%, #0e0e12 100%);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     a {
@@ -49,7 +52,7 @@
 
     img {
       display: block;
-      width: 100%;
+      max-width: 100%;
       height: auto;
     }
 
@@ -61,7 +64,7 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 30;
+      z-index: 50;
       backdrop-filter: blur(16px);
       background: rgba(9, 9, 12, 0.72);
       border-bottom: 1px solid var(--line);
@@ -94,6 +97,7 @@
       color: var(--gold-2);
       font-size: 15px;
       box-shadow: var(--shadow);
+      flex: 0 0 auto;
     }
 
     .nav-links {
@@ -118,7 +122,7 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      min-height: 48px;
+      min-height: 46px;
       padding: 0 18px;
       border-radius: 999px;
       border: 1px solid transparent;
@@ -143,33 +147,6 @@
       color: var(--text);
     }
 
-    .hero {
-      padding: 70px 0 28px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .hero-copy,
-    .hero-card,
-    .section-card,
-    .project-card,
-    .metric,
-    .contact-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-copy {
-      padding: 38px;
-    }
-
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -191,83 +168,118 @@
     }
 
     h1 {
-      font-size: clamp(40px, 6vw, 72px);
+      font-size: clamp(38px, 6vw, 68px);
       margin-top: 18px;
       letter-spacing: -0.04em;
     }
 
+    h2 {
+      font-size: clamp(28px, 4vw, 42px);
+    }
+
+    section {
+      padding: 28px 0;
+    }
+
+    .hero {
+      padding: 70px 0 24px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-card,
+    .section-card,
+    .project-card,
+    .metric,
+    .contact-card,
+    .video-card,
+    .proof-box,
+    .service-box {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 38px;
+    }
+
     .hero-copy p {
-      margin: 18px 0 0;
-      max-width: 760px;
+      margin: 16px 0 0;
+      max-width: 720px;
       color: #d7d1c6;
-      font-size: 18px;
+      font-size: 17px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 24px;
     }
 
     .hero-meta {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
-      margin-top: 28px;
+      margin-top: 24px;
     }
 
     .metric {
-      padding: 18px;
+      padding: 16px;
       border-radius: var(--radius-md);
     }
 
     .metric strong {
       display: block;
-      font-size: 26px;
+      font-size: 24px;
       color: var(--gold-2);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .metric span {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .hero-card {
-      overflow: hidden;
       position: relative;
+      overflow: hidden;
       min-height: 100%;
     }
 
     .hero-card img {
+      width: 100%;
       height: 100%;
-      min-height: 540px;
+      min-height: 520px;
       object-fit: cover;
     }
 
     .hero-overlay {
       position: absolute;
-      inset: auto 22px 22px 22px;
-      padding: 20px;
-      background: linear-gradient(180deg, rgba(9,9,12,0.25), rgba(9,9,12,0.88));
+      inset: auto 18px 18px 18px;
+      padding: 16px 18px;
+      background: linear-gradient(180deg, rgba(9,9,12,0.22), rgba(9,9,12,0.88));
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 18px;
     }
 
     .hero-overlay strong {
       display: block;
-      font-size: 18px;
-      margin-bottom: 6px;
+      font-size: 17px;
+      margin-bottom: 4px;
     }
 
     .hero-overlay span {
       color: var(--muted);
-      font-size: 14px;
-    }
-
-    section {
-      padding: 26px 0;
+      font-size: 13px;
     }
 
     .section-head {
@@ -279,63 +291,170 @@
     }
 
     .section-head p {
-      margin: 10px 0 0;
-      color: var(--muted);
-      max-width: 760px;
+      display: none;
     }
 
     .section-card {
-      padding: 30px;
+      padding: 28px;
     }
 
-    .about-grid,
-    .services-grid,
-    .projects-grid,
-    .contact-grid,
-    .proof-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
-    .proof-box {
-      padding: 22px;
+    .about-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #ddd7cc;
+      font-size: 15px;
+    }
+
+    .bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(145deg, var(--gold-2), var(--gold));
+      margin-top: 6px;
+      flex: 0 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-box {
+      padding: 24px;
       border-radius: var(--radius-md);
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,0.028), rgba(255,255,255,0.012));
     }
 
-    .proof-box strong {
-      display: block;
+    .service-box h3 {
+      font-size: 22px;
+      margin-bottom: 0;
+    }
+
+    .service-box p {
+      display: none;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      overflow: hidden;
+    }
+
+    .project-media {
+      position: relative;
+      height: 300px;
+      max-height: 300px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #111217, #0d0e12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .project-media img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+      transition: transform 0.25s ease;
+    }
+
+    .project-card:hover .project-media img {
+      transform: scale(1.01);
+    }
+
+    .project-body {
+      padding: 20px 22px 22px;
+    }
+
+    .project-body h3 {
+      font-size: 24px;
+      margin-top: 2px;
+    }
+
+    .project-body p {
+      display: none;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(216,176,122,0.20);
+      background: rgba(185,145,90,0.08);
       color: var(--gold-2);
-      margin-bottom: 6px;
-      font-size: 16px;
+      font-size: 12px;
+      font-weight: 700;
     }
 
-    .proof-box span {
-      color: var(--muted);
-      font-size: 14px;
+    .project-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .link-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+      font-size: 13px;
+      font-weight: 700;
     }
 
     .videos-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
+      align-items: start;
     }
 
     .video-card {
-      max-width: 360px;
+      max-width: 280px;
       width: 100%;
       margin: 0 auto;
       overflow: hidden;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
     }
 
     .video-frame {
       position: relative;
       width: 100%;
-      aspect-ratio: 9 / 14;
+      aspect-ratio: 9 / 15;
+      max-height: 420px;
       background: #0d0e12;
     }
 
@@ -349,79 +468,61 @@
     }
 
     .video-body {
-      padding: 18px;
+      padding: 14px 16px 16px;
     }
 
     .video-body h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
+      font-size: 18px;
+      margin-bottom: 0;
     }
 
     .video-body p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
+      display: none;
     }
 
-    .video-card {
-      overflow: hidden;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
     }
 
-    .video-frame {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 9 / 16;
-      background: #0d0e12;
+    .proof-box {
+      padding: 20px;
+      border-radius: var(--radius-md);
     }
 
-    .video-frame iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      background: #0d0e12;
+    .proof-box strong {
+      display: block;
+      color: var(--gold-2);
+      font-size: 16px;
     }
 
-    .video-body {
-      padding: 22px;
-    }
-
-    .video-body h3 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .video-body p {
-      margin: 0;
-      color: var(--muted);
+    .proof-box span {
+      display: none;
     }
 
     .contact-grid {
+      display: grid;
       grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
     }
 
     .contact-card {
-      padding: 30px;
+      padding: 28px;
     }
 
     .contact-card p {
-      color: var(--muted);
-      margin-top: 10px;
+      display: none;
     }
 
     .contact-list {
       display: grid;
       gap: 12px;
-      margin-top: 22px;
+      margin-top: 18px;
     }
 
     .contact-item {
-      padding: 16px 18px;
+      padding: 15px 16px;
       border-radius: 16px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,0.02);
@@ -447,6 +548,11 @@
 
       .videos-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .project-media {
+        height: 260px;
+        max-height: 260px;
       }
 
       .hero-card img {
@@ -480,6 +586,11 @@
         grid-template-columns: 1fr;
       }
 
+      .project-media {
+        height: 220px;
+        max-height: 220px;
+      }
+
       h1 {
         font-size: 42px;
       }
@@ -493,6 +604,7 @@
         <span class="brand-mark">MA</span>
         <span>Mohamed Abdelrazek</span>
       </a>
+
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
@@ -510,36 +622,39 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Content Creation • Ad Creatives • Short-Form Video</span>
-          <h1>I build content that looks premium and sells the message clearly.</h1>
-          <p>
-            Content creator and digital marketer focused on social content, static ad creatives,
-            commercial product visuals, and short-form video built for real business use.
-          </p>
+          <h1>I build sharp content for real brands.</h1>
+          <p>Social content, static creatives, product visuals, and short-form video.</p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">View Selected Work</a>
-            <a class="btn btn-secondary" href="#contact">Let’s Work Together</a>
+            <a class="btn btn-primary" href="#work">View Work</a>
+            <a class="btn btn-secondary" href="#contact">Contact</a>
           </div>
+
           <div class="hero-meta">
             <div class="metric">
               <strong>5</strong>
-              <span>featured portfolio projects</span>
+              <span>projects</span>
             </div>
             <div class="metric">
               <strong>3</strong>
-              <span>core content disciplines</span>
+              <span>services</span>
             </div>
             <div class="metric">
-              <strong>100%</strong>
-              <span>strategy-led creative approach</span>
+              <strong>1</strong>
+              <span>clear focus</span>
             </div>
           </div>
         </div>
 
         <div class="hero-card">
-          <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/premium-retail-display-with-highlighted-stand-and-customer.png?v=1764059415" alt="Featured premium creative sample" />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/premium-retail-display-with-highlighted-stand-and-customer.png?v=1764059415"
+            alt="Featured premium creative sample"
+            loading="lazy"
+          />
           <div class="hero-overlay">
-            <strong>Featured visual direction</strong>
-            <span>Commercial product creative for premium retail use cases</span>
+            <strong>Featured visual</strong>
+            <span>Premium commercial creative</span>
           </div>
         </div>
       </div>
@@ -550,28 +665,36 @@
         <div class="section-head">
           <div>
             <span class="eyebrow">About</span>
-            <h2>Creative work built around business value</h2>
-            <p>
-              I do not create content just to fill a feed. I build content that helps brands look sharper,
-              explain their value faster, and produce stronger audience response.
-            </p>
+            <h2>Business-first creative work</h2>
           </div>
         </div>
+
         <div class="section-card about-grid">
           <div>
             <h3>What I bring</h3>
             <div class="about-list">
-              <div class="list-item"><span class="bullet"></span><span>Strong content thinking across static, video, and promotional formats.</span></div>
-              <div class="list-item"><span class="bullet"></span><span>Clear messaging structure that turns offers into understandable, attractive content.</span></div>
-              <div class="list-item"><span class="bullet"></span><span>Industry versatility across hospitality, real estate, e-commerce, product brands, and healthcare communication.</span></div>
+              <div class="list-item">
+                <span class="bullet"></span>
+                <span>Strong visual and content direction.</span>
+              </div>
+              <div class="list-item">
+                <span class="bullet"></span>
+                <span>Clear message structure.</span>
+              </div>
             </div>
           </div>
+
           <div>
             <h3>How I work</h3>
             <div class="about-list">
-              <div class="list-item"><span class="bullet"></span><span>Research the audience, context, and business goal.</span></div>
-              <div class="list-item"><span class="bullet"></span><span>Build the right message angle, visual direction, and content format.</span></div>
-              <div class="list-item"><span class="bullet"></span><span>Deliver creative assets that are platform-aware, polished, and commercially useful.</span></div>
+              <div class="list-item">
+                <span class="bullet"></span>
+                <span>Research the brand and audience.</span>
+              </div>
+              <div class="list-item">
+                <span class="bullet"></span>
+                <span>Build content that fits the goal.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -583,22 +706,21 @@
         <div class="section-head">
           <div>
             <span class="eyebrow">Services</span>
-            <h2>What this portfolio covers</h2>
-            <p>Three core service areas that fit your current body of work and present it professionally on GitHub Pages, with full images and embedded video samples.</p>
+            <h2>Core work</h2>
           </div>
         </div>
+
         <div class="services-grid">
           <article class="service-box">
             <h3>Content Creation</h3>
-            <p>Social content, caption direction, campaign messaging, brand storytelling, promotional content, and content planning.</p>
           </article>
+
           <article class="service-box">
             <h3>Ad Creatives</h3>
-            <p>Static ads, product visuals, promotional creative systems, visual use-case scenes, and performance-oriented concept building.</p>
           </article>
+
           <article class="service-box">
             <h3>Short-Form Video</h3>
-            <p>TikTok and Reel-style concepts, hook-driven video logic, scene structure, social pacing, and campaign-ready video direction.</p>
           </article>
         </div>
       </div>
@@ -610,14 +732,17 @@
           <div>
             <span class="eyebrow">Selected Work</span>
             <h2>Featured projects</h2>
-            <p>Real projects organized by industry so visitors understand both your creative range and your business thinking.</p>
           </div>
         </div>
 
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-media">
-              <img src="https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/595259565_875931331631107_698700857952058153_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=gDJXIPRDch4Q7kNvwFmFlOK&_nc_oc=AdnmB2m3Jm1QlO8Yw4aqEuESuvKPbhYeyc1gUqRq9Crgk-qTU4RdHVfXds9kjrjqB34&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=VwNnuGg6hbFL6aaCsRsOgw&_nc_ss=8&oh=00_AfxWyDZioyJv9NyFWq_jHyxQ94AvdTBM_HJhvfyyF2kV-g&oe=69B88E32" alt="Haksoss Café and Restaurant creative" />
+              <img
+                src="https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/595259565_875931331631107_698700857952058153_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=gDJXIPRDch4Q7kNvwFmFlOK&_nc_oc=AdnmB2m3Jm1QlO8Yw4aqEuESuvKPbhYeyc1gUqRq9Crgk-qTU4RdHVfXds9kjrjqB34&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=VwNnuGg6hbFL6aaCsRsOgw&_nc_ss=8&oh=00_AfxWyDZioyJv9NyFWq_jHyxQ94AvdTBM_HJhvfyyF2kV-g&oe=69B88E32"
+                alt="Haksoss Café and Restaurant creative"
+                loading="lazy"
+              />
             </div>
             <div class="project-body">
               <div class="tag-row">
@@ -625,7 +750,6 @@
                 <span class="tag">Static Creative</span>
               </div>
               <h3>Haksoss Café & Restaurant</h3>
-              <p>Premium food and beverage social creatives focused on appetite appeal, atmosphere, and platform-ready visual polish.</p>
               <div class="project-links">
                 <a class="link-chip" href="https://www.facebook.com/share/r/16mPTy3YaZ/" target="_blank" rel="noreferrer">View Reel</a>
               </div>
@@ -634,7 +758,11 @@
 
           <article class="project-card">
             <div class="project-media">
-              <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/tech-retail.png?v=1765326537" alt="TechnoMounts creative" />
+              <img
+                src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/tech-retail.png?v=1765326537"
+                alt="TechnoMounts creative"
+                loading="lazy"
+              />
             </div>
             <div class="project-body">
               <div class="tag-row">
@@ -642,7 +770,6 @@
                 <span class="tag">Ad Creative</span>
               </div>
               <h3>TechnoMounts</h3>
-              <p>Commercial product creative system across retail, hospitality, events, and business use cases with premium visual positioning.</p>
               <div class="project-links">
                 <a class="link-chip" href="https://www.technomounts.com/" target="_blank" rel="noreferrer">Website</a>
               </div>
@@ -651,21 +778,28 @@
 
           <article class="project-card">
             <div class="project-media">
-              <img src="https://scontent.fcai19-8.fna.fbcdn.net/v/t51.82787-15/602008089_18248920693288800_61861655786230000_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=1Vn-CwSU_04Q7kNvwH0FuxA&_nc_oc=Adn8abaPSkNBdkGCmeZ1FOi9WPyZzURz3HJK1mJ-0WVek8c0_DztnygaBTswJG198BY&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=Lvlp80yYRR2L0NH5HGEFSg&_nc_ss=8&oh=00_AfwzFbmijlmG55VPgbQWoLe739eZOzdy1ox3NONuBR4nFQ&oe=69B89697" alt="Rafiki Veterinary Hospital creative" />
+              <img
+                src="https://scontent.fcai19-8.fna.fbcdn.net/v/t51.82787-15/602008089_18248920693288800_61861655786230000_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=1Vn-CwSU_04Q7kNvwH0FuxA&_nc_oc=Adn8abaPSkNBdkGCmeZ1FOi9WPyZzURz3HJK1mJ-0WVek8c0_DztnygaBTswJG198BY&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=Lvlp80yYRR2L0NH5HGEFSg&_nc_ss=8&oh=00_AfwzFbmijlmG55VPgbQWoLe739eZOzdy1ox3NONuBR4nFQ&oe=69B89697"
+                alt="Rafiki Veterinary Hospital creative"
+                loading="lazy"
+              />
             </div>
             <div class="project-body">
               <div class="tag-row">
                 <span class="tag">Healthcare</span>
-                <span class="tag">Educational Creative</span>
+                <span class="tag">Educational</span>
               </div>
               <h3>Rafiki Veterinary Hospital</h3>
-              <p>Awareness-led healthcare visuals that package educational topics into clear, branded, engaging social content.</p>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-media">
-              <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/realistic-restaurant-black-stand.png?v=1765454686" alt="Saruja Restaurants project" />
+              <img
+                src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/realistic-restaurant-black-stand.png?v=1765454686"
+                alt="Saruja Restaurants project"
+                loading="lazy"
+              />
             </div>
             <div class="project-body">
               <div class="tag-row">
@@ -673,7 +807,6 @@
                 <span class="tag">Short-Form Video</span>
               </div>
               <h3>Saruja Restaurants</h3>
-              <p>Hospitality-focused short-form content built for social platforms where hook speed, mood, and appetite appeal matter.</p>
               <div class="project-links">
                 <a class="link-chip" href="https://www.tiktok.com/@saruja.restaurants/video/7432309714056121607?is_from_webapp=1&sender_device=pc&web_id=7587772464236709387" target="_blank" rel="noreferrer">TikTok 1</a>
                 <a class="link-chip" href="https://www.tiktok.com/@saruja.restaurants/video/7515131227393838352?is_from_webapp=1&sender_device=pc&web_id=7587772464236709387" target="_blank" rel="noreferrer">TikTok 2</a>
@@ -683,7 +816,11 @@
 
           <article class="project-card">
             <div class="project-media">
-              <img src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/conference-center.png?v=1765441959" alt="Invest Real Estate project" />
+              <img
+                src="https://cdn.shopify.com/s/files/1/0041/0320/9033/files/conference-center.png?v=1765441959"
+                alt="Invest Real Estate project"
+                loading="lazy"
+              />
             </div>
             <div class="project-body">
               <div class="tag-row">
@@ -691,7 +828,6 @@
                 <span class="tag">Short-Form Video</span>
               </div>
               <h3>Invest Real Estate</h3>
-              <p>Short-form social content built for trust, authority, and visibility in real estate and investment-facing communication.</p>
               <div class="project-links">
                 <a class="link-chip" href="https://www.tiktok.com/@investrealestate/video/7390904470080621866?is_from_webapp=1&sender_device=pc&web_id=7587772464236709387" target="_blank" rel="noreferrer">TikTok 1</a>
                 <a class="link-chip" href="https://www.tiktok.com/@investrealestate/video/7343824767646141742?is_from_webapp=1&sender_device=pc&web_id=7587772464236709387" target="_blank" rel="noreferrer">TikTok 2</a>
@@ -707,94 +843,94 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Video Showcase</span>
-            <h2>Embedded video work</h2>
-            <p>Videos are shown directly inside the portfolio so visitors can watch samples without leaving the site.</p>
+            <span class="eyebrow">Videos</span>
+            <h2>Video showcase</h2>
           </div>
         </div>
 
         <div class="videos-grid">
           <article class="video-card">
             <div class="video-frame">
-              <iframe src="https://www.tiktok.com/embed/v2/7432309714056121607" allowfullscreen loading="lazy" title="Saruja Restaurants video 1"></iframe>
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7432309714056121607"
+                allowfullscreen
+                loading="lazy"
+                title="Saruja Restaurants video 1"
+              ></iframe>
             </div>
             <div class="video-body">
               <div class="tag-row">
                 <span class="tag">Saruja</span>
-                <span class="tag">Hospitality Video</span>
               </div>
-              <h3>Saruja Restaurants Video 1</h3>
-              <p>Short-form restaurant content built around appetite appeal, mood, and quick social-platform engagement.</p>
+              <h3>Saruja Video 1</h3>
             </div>
           </article>
 
           <article class="video-card">
             <div class="video-frame">
-              <iframe src="https://www.tiktok.com/embed/v2/7515131227393838352" allowfullscreen loading="lazy" title="Saruja Restaurants video 2"></iframe>
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7515131227393838352"
+                allowfullscreen
+                loading="lazy"
+                title="Saruja Restaurants video 2"
+              ></iframe>
             </div>
             <div class="video-body">
               <div class="tag-row">
                 <span class="tag">Saruja</span>
-                <span class="tag">Restaurant Video</span>
               </div>
-              <h3>Saruja Restaurants Video 2</h3>
-              <p>Another hospitality sample showing pacing, brand atmosphere, and short-form content structure.</p>
+              <h3>Saruja Video 2</h3>
             </div>
           </article>
 
           <article class="video-card">
             <div class="video-frame">
-              <iframe src="https://www.tiktok.com/embed/v2/7390904470080621866" allowfullscreen loading="lazy" title="Invest Real Estate video 1"></iframe>
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7390904470080621866"
+                allowfullscreen
+                loading="lazy"
+                title="Invest Real Estate video 1"
+              ></iframe>
             </div>
             <div class="video-body">
               <div class="tag-row">
-                <span class="tag">Invest Real Estate</span>
-                <span class="tag">Property Video</span>
+                <span class="tag">Invest</span>
               </div>
-              <h3>Invest Real Estate Video 1</h3>
-              <p>Short-form real estate content designed to build authority, visibility, and audience trust.</p>
+              <h3>Invest Video 1</h3>
             </div>
           </article>
 
           <article class="video-card">
             <div class="video-frame">
-              <iframe src="https://www.tiktok.com/embed/v2/7343824767646141742" allowfullscreen loading="lazy" title="Invest Real Estate video 2"></iframe>
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7343824767646141742"
+                allowfullscreen
+                loading="lazy"
+                title="Invest Real Estate video 2"
+              ></iframe>
             </div>
             <div class="video-body">
               <div class="tag-row">
-                <span class="tag">Invest Real Estate</span>
-                <span class="tag">Social Video</span>
+                <span class="tag">Invest</span>
               </div>
-              <h3>Invest Real Estate Video 2</h3>
-              <p>Real estate social sample focused on fast delivery, platform fit, and business-facing communication.</p>
+              <h3>Invest Video 2</h3>
             </div>
           </article>
 
           <article class="video-card">
             <div class="video-frame">
-              <iframe src="https://www.tiktok.com/embed/v2/7316155565133122862" allowfullscreen loading="lazy" title="Invest Real Estate video 3"></iframe>
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7316155565133122862"
+                allowfullscreen
+                loading="lazy"
+                title="Invest Real Estate video 3"
+              ></iframe>
             </div>
             <div class="video-body">
               <div class="tag-row">
-                <span class="tag">Invest Real Estate</span>
-                <span class="tag">Promotional Video</span>
+                <span class="tag">Invest</span>
               </div>
-              <h3>Invest Real Estate Video 3</h3>
-              <p>Promotional short-form content structured for clarity, trust-building, and stronger social attention.</p>
-            </div>
-          </article>
-
-          <article class="video-card">
-            <div class="video-frame">
-              <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F16mPTy3YaZ%2F&show_text=false&width=560" allowfullscreen loading="lazy" title="Haksoss Café and Restaurant reel"></iframe>
-            </div>
-            <div class="video-body">
-              <div class="tag-row">
-                <span class="tag">Haksoss</span>
-                <span class="tag">Facebook Reel</span>
-              </div>
-              <h3>Haksoss Café & Restaurant Reel</h3>
-              <p>Facebook reel embed included inside the portfolio to present hospitality video work directly on-page.</p>
+              <h3>Invest Video 3</h3>
             </div>
           </article>
         </div>
@@ -805,27 +941,23 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Creative Focus</span>
-            <h2>What makes this portfolio useful</h2>
-            <p>This site is positioned to attract clients and recruiters who care about both aesthetics and business logic.</p>
+            <span class="eyebrow">Focus</span>
+            <h2>What I do best</h2>
           </div>
         </div>
+
         <div class="proof-grid">
           <div class="proof-box">
-            <strong>Industry range</strong>
-            <span>Hospitality, healthcare, product marketing, real estate, and branded commercial content.</span>
+            <strong>Brand content</strong>
           </div>
           <div class="proof-box">
-            <strong>Content variety</strong>
-            <span>Static visuals, short-form video samples, awareness creatives, and product advertising assets.</span>
+            <strong>Short-form video</strong>
           </div>
           <div class="proof-box">
-            <strong>Professional framing</strong>
-            <span>Each project is shown as a business case, not a random collection of links.</span>
+            <strong>Ad creatives</strong>
           </div>
           <div class="proof-box">
-            <strong>GitHub-ready build</strong>
-            <span>Single-file static site structure that is easy to publish, edit, and expand later.</span>
+            <strong>Clean presentation</strong>
           </div>
         </div>
       </div>
@@ -835,23 +967,20 @@
       <div class="container contact-grid">
         <div class="contact-card">
           <span class="eyebrow">Contact</span>
-          <h2>Let’s build better content for your brand</h2>
-          <p>
-            Available for freelance, contract, and remote opportunities in content creation,
-            ad creatives, and short-form video strategy.
-          </p>
+          <h2>Let’s work together</h2>
           <div class="hero-actions">
             <a class="btn btn-primary" href="mailto:moe-abdelrazek@outlook.com">Email Me</a>
-            <a class="btn btn-secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub Profile</a>
+            <a class="btn btn-secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
+
         <div class="contact-card">
           <h3>Portfolio details</h3>
           <div class="contact-list">
-            <div class="contact-item">Name: Mohamed Abdelrazek</div>
-            <div class="contact-item">Location: Alexandria, Egypt</div>
-            <div class="contact-item">Focus: Content Creation, Ad Creatives, Short-Form Video</div>
-            <div class="contact-item">Email: moe-abdelrazek@outlook.com</div>
+            <div class="contact-item">Mohamed Abdelrazek</div>
+            <div class="contact-item">Alexandria, Egypt</div>
+            <div class="contact-item">Content Creation • Ad Creatives • Short-Form Video</div>
+            <div class="contact-item">moe-abdelrazek@outlook.com</div>
           </div>
         </div>
       </div>
